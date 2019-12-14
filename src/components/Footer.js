@@ -3,7 +3,7 @@ import "../styles/footer.css";
 
 function Footer() {
     return (
-        <div class="footer sticky-bottom">
+        <div className="footer sticky-bottom">
             <p>I'm a footer.</p>
         </div>
     );

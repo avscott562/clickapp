@@ -1,6 +1,8 @@
 import React from 'react';
 import Card from './Card';
+import images from '../images.json';
 import "../styles/main.css";
+
 
 function Main() {
     return (
@@ -9,18 +11,16 @@ function Main() {
 
             </div>
             <div className="row row-cols-3">
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
+                {
+                    images.map((image) => {
+                        return <Card 
+                            id={image.id}
+                            src={image.src}
+                            alt={image.alt}
+                            isClicked={image.isClicked}
+                        />
+                    })
+                }
             </div>
         </div>
     );

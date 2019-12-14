@@ -3,7 +3,7 @@ import "../styles/header.css";
 
 function Header() {
     return (
-        <div class="jumbotron center">
+        <div className="jumbotron center">
             <h1 id="title">Clicky Game!</h1>
             <br />
             <h4>Click on an image to earn points, but don't click on any more than once!</h4>
