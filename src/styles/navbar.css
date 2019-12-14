@@ -1,0 +1,7 @@
+.navbar {
+    background: rgb(90, 90, 133);
+}
+
+.navbar, .nav-link {
+    color: white;
+}
