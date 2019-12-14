@@ -1,10 +1,27 @@
 import React from 'react';
+import Card from './Card';
 import "../styles/main.css";
 
 function Main() {
     return (
-        <div>
-            <p>I'm the main content section.</p>
+        <div className="container">
+            <div className="card-deck">
+
+            </div>
+            <div className="row row-cols-3">
+                <Card />
+                <Card />
+                <Card />
+                <Card />
+                <Card />
+                <Card />
+                <Card />
+                <Card />
+                <Card />
+                <Card />
+                <Card />
+                <Card />
+            </div>
         </div>
     );
   }
