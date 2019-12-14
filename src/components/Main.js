@@ -7,7 +7,7 @@ import "../styles/main.css";
 function Main() {
     return (
         <div className="container">
-            <div className="card-deck">
+            <div className="tile-deck">
 
             </div>
             <div className="row row-cols-3">

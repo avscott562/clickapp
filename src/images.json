@@ -1,8 +1,8 @@
 [
     {
         "id": 1,
-        "src": "/images/lyte.jpg",
-        "alt": "MC Lyte",
+        "src": "/images/latifah.jpg",
+        "alt": "Queen Latifah",
         "isClicked": false
     },
     {
@@ -43,8 +43,8 @@
     },
     {
         "id": 8,
-        "src": "/images/nas.jpg",
-        "alt": "Nas",
+        "src": "/images/slick.jpeg",
+        "alt": "Slick Rick",
         "isClicked": false
     },
     {
