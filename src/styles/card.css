@@ -1,3 +1,8 @@
 .card {
     width: 13rem;
+    border: 5px groove;
+}
+
+.card:hover {
+    box-shadow: 10px 10px 22px grey;
 }
