@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Header from './components/Header';
 import Main from './components/Main';
 import Card from './components/Card';
+import Footer from './components/Footer';
 import './App.css';
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <Header />
       <Main />
       <Card />
+      <Footer />
     </div>
   );
 }
