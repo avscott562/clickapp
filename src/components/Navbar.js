@@ -4,21 +4,22 @@ import "../styles/navbar.css";
 function Navbar() {
     return (
         <div class="navbar">
-            <p>I'm the navbar.</p>
-            <ul class="nav">
-                <li class="nav-item">
-                    <a class="nav-link active" href="#">Active</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                </li>
-            </ul>
+            <div class="nav">
+                <a class="nav-link" href="/">Clicky Game</a>
+            </div>
+            <div>Click an image to begin!</div>
+            <div id="scores">
+                <span class="score-section">
+                    <span>Score: </span>
+                    <span id="current-score">0</span>
+                </span>
+                <span class="score-section">|</span>
+                <span>
+                    <span class="score-section">Top Score: </span>
+                    <span id="high-score">0</span>
+                </span>
+            </div>
+            
         </div>
     );
   }
