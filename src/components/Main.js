@@ -16,7 +16,6 @@ class Main extends Component {
                             return <Card 
                                 key={image.id}
                                 image={image}
-                                handleIncrement={this.props.handleIncrement}
                                 imageClicked={this.props.imageClicked}
                             />
                         })

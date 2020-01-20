@@ -20,20 +20,24 @@ class App extends Component {
     this.setState({ images: images });
   }
 
-  handleIncrement = (isClicked) => {
-    if(!isClicked){
-      this.setState({ currentScore: this.state.currentScore + 1 });
-      if (this.state.currentScore > this.state.topScore) {
-        this.setState({ topScore: this.state.currentScore });
-      }   
+  handleIncrement = () => {
+      let count = this.state.currentScore + 1;
+      this.setState({ currentScore: count });
+      if (count >= this.state.topScore) {
+        this.setState({ topScore: count });
     }
   }
 
   imageClicked = (id) => {
     this.setState({ images: this.state.images.map(image => {
       if(image.id === id) {
-        console.log(image.alt);
-        // image.isClicked = !image.isClicked
+        if(!image.isClicked) {
+          console.log(`${image.alt} has been click ${image.isClicked}`);
+          image.isClicked = true;
+          this.handleIncrement();
+        } else {
+          console.log(`${image.alt} has been clicked already!`);
+        }
       }
       return image;
     }) });
@@ -46,7 +50,6 @@ class App extends Component {
         <Header />
         <Main 
           images={this.state.images}
-          handleIncrement={this.handleIncrement} 
           imageClicked={this.imageClicked} 
         />
         <Footer />
