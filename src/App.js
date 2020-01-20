@@ -21,11 +21,21 @@ class App extends Component {
   }
 
   handleIncrement = () => {
-      let count = this.state.currentScore + 1;
-      this.setState({ currentScore: count });
-      if (count >= this.state.topScore) {
-        this.setState({ topScore: count });
+    let count = this.state.currentScore + 1;
+    this.setState({ currentScore: count });
+    if (count >= this.state.topScore) {
+      this.setState({ topScore: count });
     }
+    console.log(`current score is ${this.state.currentScore+1}.  High score is ${this.state.topScore+1}.`);
+    return this.state.topScore+1
+  }
+
+  reset = () => {
+    let count = 0;
+    this.setState({ currentScore: count });
+    this.setState({ images: this.state.images.map(image => {
+      image.isClicked = false;
+    }) });
   }
 
   shuffleImages = (arr) => {
@@ -50,6 +60,7 @@ class App extends Component {
           this.handleIncrement();
         } else {
           console.log(`${image.alt} has been clicked already!`);
+          this.reset();
         }
       }
       return image;
