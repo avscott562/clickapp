@@ -17,7 +17,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.setState({ images: images });
+    this.setState({ images: this.shuffleImages(images) });
   }
 
   handleIncrement = () => {
@@ -48,13 +48,13 @@ class App extends Component {
           console.log(`${image.alt} has been click ${image.isClicked}`);
           image.isClicked = true;
           this.handleIncrement();
-          this.shuffleImages([1, 2, 3, 4, 5, 6, 7, 8, 9]);
         } else {
           console.log(`${image.alt} has been clicked already!`);
         }
       }
       return image;
     }) });
+    return this.setState({ images: this.shuffleImages(images) });
   }
 
   render() {
