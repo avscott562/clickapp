@@ -28,6 +28,19 @@ class App extends Component {
     }
   }
 
+  shuffleImages = (arr) => {
+    let randomIndex;
+    let temp;
+    for (let i=0; i<arr.length; i++) {
+      temp = arr[i];
+      randomIndex = Math.floor(Math.random() * (i+1));
+      arr[i] = arr[randomIndex];
+      arr[randomIndex] = temp;
+    }
+    console.log(arr);
+    return arr;
+  }
+
   imageClicked = (id) => {
     this.setState({ images: this.state.images.map(image => {
       if(image.id === id) {
@@ -35,6 +48,7 @@ class App extends Component {
           console.log(`${image.alt} has been click ${image.isClicked}`);
           image.isClicked = true;
           this.handleIncrement();
+          this.shuffleImages([1, 2, 3, 4, 5, 6, 7, 8, 9]);
         } else {
           console.log(`${image.alt} has been clicked already!`);
         }
