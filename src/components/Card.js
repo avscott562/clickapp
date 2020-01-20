@@ -1,27 +1,34 @@
-import React from 'react';
+import React, { Component } from 'react';
 import "../styles/card.css";
+import { render } from '@testing-library/react';
 
-function clicked() {
-    if(!this.isClicked) {
-        this.isClicked = true;
-    } else {
-        console.log('game over!');
-    }
-}
+// function clicked(isClicked) {
+//     if( !isClicked ) {
+//         return true
+//     } 
+// }
 
-function Card(props) {
-    return (
-        <div className="col-3">
-            <div className="tile mb-3">
-                <img 
-                    className="tile-image" 
-                    src={props.src} 
-                    data-id={props.id} 
-                    alt={props.alt} 
-                    isClicked={props.isClicked}></img>
+
+class Card extends Component {
+    render() {
+        const { id, src, alt, isClicked } = this.props.image
+        return (
+            <div className="col-3">
+                <div className="tile mb-3">
+                    <img 
+                        className="tile-image" 
+                        src={src} 
+                        data-id={id} 
+                        alt={alt} 
+                        data-clicked={isClicked}
+                        onClick={this.props.imageClicked.bind(this, id)}
+                    />
+            
+                </div>
             </div>
-        </div>
-    );
+        );
+    }
+
   }
   
   export default Card;
