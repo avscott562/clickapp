@@ -58,7 +58,7 @@ class App extends Component {
         if(!image.isClicked) {
           console.log(`${image.alt} has been click ${image.isClicked}`);
           image.isClicked = true;
-          this.setState({ headerMessage: `You guessed correctly!` });
+          this.setState({ headerMessage: "You guessed correctly!" });
           this.handleIncrement();
         } else {
           this.setState({ headerMessage: `You already clicked ${image.alt}!` });
