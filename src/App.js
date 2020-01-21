@@ -3,7 +3,7 @@ import Navbar from './components/Navbar';
 import Header from './components/Header';
 import Main from './components/Main';
 import Footer from './components/Footer';
-import images from './api/images.json';
+import images from './images.json';
 import './App.css';
 
 
