@@ -1,12 +1,5 @@
 import React, { Component } from 'react';
 import "../styles/card.css";
-import { render } from '@testing-library/react';
-
-// function clicked(isClicked) {
-//     if( !isClicked ) {
-//         return true
-//     } 
-// }
 
 
 class Card extends Component {

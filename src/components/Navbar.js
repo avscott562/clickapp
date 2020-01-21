@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import "../styles/navbar.css";
 
 function Navbar(props) {
@@ -7,7 +7,7 @@ function Navbar(props) {
             <div>
                 <a href="/" className="navbar-brand">Clicky Game</a>
             </div>
-            <h1>Click an image to begin!</h1>
+            <h2> { props.message } </h2>
             <ul id="scores" className="nav nav-fill">
                 <li className="score-section nav-item">
                     Score: <span id="current-score"> { props.current }</span>
